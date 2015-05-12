@@ -1,0 +1,48 @@
+﻿@model Amigos.Models.Amigo
+
+@{
+    ViewBag.Title = "Borrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar @Html.DisplayFor(model => model.name)</h2>
+
+<h3>¿Estás seguro de querer borrar a @Html.DisplayFor(model => model.name)?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lati)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a lista", "Index")
+        </div>
+    }
+</div>

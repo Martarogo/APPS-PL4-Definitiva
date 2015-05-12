@@ -1,0 +1,42 @@
+﻿@model Amigos.Models.Amigo
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles @Html.DisplayFor(model => model.name)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)            
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lati)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Volver a lista", "Index")
+</p>

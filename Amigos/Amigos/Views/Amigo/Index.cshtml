@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Amigos.Models.Amigo>
+
+@{
+    ViewBag.Title = @Resources.Resource.Inicio;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> @Resources.Resource.Titulo</h2>
+
+<p>
+    @Html.ActionLink(Resources.Resource.Crea, "Create")
+</p>
+
+<p>
+    @Html.ActionLink(Resources.Resource.Busca,"Distance")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.longi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lati)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.longi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lati)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
