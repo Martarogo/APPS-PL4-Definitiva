@@ -117,14 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AcercaDe" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="Borra" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="BotonBuscar" xml:space="preserve">
+    <value>Search</value>
   </data>
   <data name="Busca" xml:space="preserve">
     <value>Look for friends nearby</value>
   </data>
+  <data name="Contacto" xml:space="preserve">
+    <value>Contact</value>
+  </data>
   <data name="Crea" xml:space="preserve">
     <value>Add a new friend</value>
+  </data>
+  <data name="Distancia" xml:space="preserve">
+    <value>Friends nearby</value>
+  </data>
+  <data name="Edita" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="GuardaCambios" xml:space="preserve">
+    <value>Save changes</value>
   </data>
   <data name="Inicio" xml:space="preserve">
     <value>Home</value>
@@ -141,10 +159,25 @@
   <data name="Nombre" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="PieDePag" xml:space="preserve">
+    <value>My ASP.NET Amigo application</value>
+  </data>
+  <data name="StringBuscar" xml:space="preserve">
+    <value>Friends closer than:</value>
+  </data>
   <data name="Titulo" xml:space="preserve">
     <value>Amigo</value>
   </data>
+  <data name="Unidades" xml:space="preserve">
+    <value>meters</value>
+  </data>
   <data name="Ve" xml:space="preserve">
     <value>Details</value>
+  </data>
+  <data name="VolverDeFiltro" xml:space="preserve">
+    <value>Back to full list</value>
+  </data>
+  <data name="VolverNormal" xml:space="preserve">
+    <value>Back to list</value>
   </data>
 </root>

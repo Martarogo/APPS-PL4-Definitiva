@@ -61,11 +61,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Acerca de.
+        /// </summary>
+        public static string AcercaDe {
+            get {
+                return ResourceManager.GetString("AcercaDe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Borrar.
         /// </summary>
         public static string Borra {
             get {
                 return ResourceManager.GetString("Borra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Buscar.
+        /// </summary>
+        public static string BotonBuscar {
+            get {
+                return ResourceManager.GetString("BotonBuscar", resourceCulture);
             }
         }
         
@@ -79,11 +97,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Contacto.
+        /// </summary>
+        public static string Contacto {
+            get {
+                return ResourceManager.GetString("Contacto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Añade a un amigo.
         /// </summary>
         public static string Crea {
             get {
                 return ResourceManager.GetString("Crea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Amigos cerca.
+        /// </summary>
+        public static string Distancia {
+            get {
+                return ResourceManager.GetString("Distancia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Editar.
+        /// </summary>
+        public static string Edita {
+            get {
+                return ResourceManager.GetString("Edita", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Grardar cambios.
+        /// </summary>
+        public static string GuardaCambios {
+            get {
+                return ResourceManager.GetString("GuardaCambios", resourceCulture);
             }
         }
         
@@ -133,6 +187,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Mi aplicación Amigo ASP.NET.
+        /// </summary>
+        public static string PieDePag {
+            get {
+                return ResourceManager.GetString("PieDePag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Amigos a menos de :.
+        /// </summary>
+        public static string StringBuscar {
+            get {
+                return ResourceManager.GetString("StringBuscar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Amigo.
         /// </summary>
         public static string Titulo {
@@ -142,11 +214,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a metros.
+        /// </summary>
+        public static string Unidades {
+            get {
+                return ResourceManager.GetString("Unidades", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Detalles.
         /// </summary>
         public static string Ve {
             get {
                 return ResourceManager.GetString("Ve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Volver a lista completa.
+        /// </summary>
+        public static string VolverDeFiltro {
+            get {
+                return ResourceManager.GetString("VolverDeFiltro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Volver a la lista.
+        /// </summary>
+        public static string VolverNormal {
+            get {
+                return ResourceManager.GetString("VolverNormal", resourceCulture);
             }
         }
     }

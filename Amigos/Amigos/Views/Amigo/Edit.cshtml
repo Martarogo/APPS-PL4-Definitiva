@@ -1,11 +1,11 @@
 ﻿@model Amigos.Models.Amigo
 
 @{
-    ViewBag.Title = "Editar";
+    ViewBag.Title = @Resources.Resource.Edita;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Editar @Html.DisplayFor(model => model.name)</h2>
+<h2>@Resources.Resource.Edita @Html.DisplayFor(model => model.name)</h2>
 
 @using (Html.BeginForm())
 {
@@ -42,12 +42,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar cambios" class="btn btn-default" />
+                <input type="submit" value=@Resources.Resource.GuardaCambios class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Volver a lista", "Index")
+    @Html.ActionLink(Resources.Resource.VolverNormal, "Index")
 </div>

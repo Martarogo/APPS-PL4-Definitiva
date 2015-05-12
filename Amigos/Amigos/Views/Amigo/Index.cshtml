@@ -41,11 +41,10 @@
             @Html.DisplayFor(modelItem => item.lati)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.ID })
+            @Html.ActionLink(Resources.Resource.Edita, "Edit", new { id=item.ID }) |
+            @Html.ActionLink(Resources.Resource.Ve, "Details", new { id = item.ID }) |
+            @Html.ActionLink(Resources.Resource.Borra, "Delete", new { id = item.ID })
         </td>
     </tr>
 }
-
 </table>

@@ -1,12 +1,12 @@
 ﻿@model Amigos.Models.Amigo
 
 @{
-    ViewBag.Title = "Distancia";
+    ViewBag.Title = @Resources.Resource.Distancia;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Distancia</h2>
-<h3>Encuentra amigos cerca de ti</h3>
+<h2>@Resources.Resource.Distancia</h2>
+<h3>@Resources.Resource.Busca</h3>
 
 @using (Html.BeginForm())
 {
@@ -16,16 +16,16 @@
 
     <p>@Html.DisplayNameFor(model => model.longi): @Html.EditorFor(model => model.longi) @Html.ValidationMessageFor(model => model.longi) </p>
     <p>@Html.DisplayNameFor(model => model.lati): @Html.EditorFor(model => model.lati) @Html.ValidationMessageFor(model => model.lati) </p>
-    <p>Amigos a menos de : @Html.TextBox("Distance") metros.</p>
+    <p>@Resources.Resource.StringBuscar @Html.TextBox("Distance") @Resources.Resource.Unidades.</p>
 
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Buscar" class="btn btn-default" />
+                <input type="submit" value=@Resources.Resource.BotonBuscar class="btn btn-default" />
             </div>
         </div>
 }
 
     <div>
-        @Html.ActionLink("Volver a lista", "Index")
+        @Html.ActionLink(@Resources.Resource.VolverNormal, "Index")
     </div>
