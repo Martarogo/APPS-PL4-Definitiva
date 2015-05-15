@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Acceso" xml:space="preserve">
+    <value>Acceso a</value>
+  </data>
   <data name="AcercaDe" xml:space="preserve">
     <value>Acerca de</value>
   </data>
@@ -134,6 +137,12 @@
   </data>
   <data name="Contacto" xml:space="preserve">
     <value>Contacto</value>
+  </data>
+  <data name="ContactoEmpresa" xml:space="preserve">
+    <value>Universidad de Oviedo</value>
+  </data>
+  <data name="ContactoSede" xml:space="preserve">
+    <value>Escuela Politécnica de Ingeniería de Gijón</value>
   </data>
   <data name="Crea" xml:space="preserve">
     <value>Añade a un amigo</value>
@@ -171,11 +180,23 @@
   <data name="PieDePag" xml:space="preserve">
     <value>Mi aplicación Amigo ASP.NET</value>
   </data>
+  <data name="Stecnico" xml:space="preserve">
+    <value>Servicio técnico</value>
+  </data>
+  <data name="StringAbout" xml:space="preserve">
+    <value>Aplicación creada por Marta Rodríguez González y Marco Martínez Ávila</value>
+  </data>
+  <data name="StringAmigo" xml:space="preserve">
+    <value>Amigo es una aplicación que permite saber dónde están tus amigos y localizar a los que están más cerca.</value>
+  </data>
   <data name="StringBorrar" xml:space="preserve">
     <value>¿Estás seguro de querer borrar a</value>
   </data>
   <data name="StringBuscar" xml:space="preserve">
     <value>Amigos a menos de :</value>
+  </data>
+  <data name="Tel" xml:space="preserve">
+    <value>Teléfono</value>
   </data>
   <data name="Titulo" xml:space="preserve">
     <value>Amigo</value>
@@ -185,6 +206,9 @@
   </data>
   <data name="Ve" xml:space="preserve">
     <value>Detalles</value>
+  </data>
+  <data name="Ventas" xml:space="preserve">
+    <value>Ventas</value>
   </data>
   <data name="VolverDeFiltro" xml:space="preserve">
     <value>Volver a lista completa</value>

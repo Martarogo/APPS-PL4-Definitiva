@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Acceso a.
+        /// </summary>
+        public static string Acceso {
+            get {
+                return ResourceManager.GetString("Acceso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Acerca de.
         /// </summary>
         public static string AcercaDe {
@@ -111,6 +120,24 @@ namespace Resources {
         public static string Contacto {
             get {
                 return ResourceManager.GetString("Contacto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Universidad de Oviedo.
+        /// </summary>
+        public static string ContactoEmpresa {
+            get {
+                return ResourceManager.GetString("ContactoEmpresa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Escuela Politécnica de Ingeniería de Gijón.
+        /// </summary>
+        public static string ContactoSede {
+            get {
+                return ResourceManager.GetString("ContactoSede", resourceCulture);
             }
         }
         
@@ -223,6 +250,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Servicio técnico.
+        /// </summary>
+        public static string Stecnico {
+            get {
+                return ResourceManager.GetString("Stecnico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Aplicación creada por Marta Rodríguez González y Marco Martínez Ávila.
+        /// </summary>
+        public static string StringAbout {
+            get {
+                return ResourceManager.GetString("StringAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Amigo es una aplicación que permite saber dónde están tus amigos y localizar a los que están más cerca..
+        /// </summary>
+        public static string StringAmigo {
+            get {
+                return ResourceManager.GetString("StringAmigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¿Estás seguro de querer borrar a.
         /// </summary>
         public static string StringBorrar {
@@ -237,6 +291,15 @@ namespace Resources {
         public static string StringBuscar {
             get {
                 return ResourceManager.GetString("StringBuscar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Teléfono.
+        /// </summary>
+        public static string Tel {
+            get {
+                return ResourceManager.GetString("Tel", resourceCulture);
             }
         }
         
@@ -264,6 +327,15 @@ namespace Resources {
         public static string Ve {
             get {
                 return ResourceManager.GetString("Ve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ventas.
+        /// </summary>
+        public static string Ventas {
+            get {
+                return ResourceManager.GetString("Ventas", resourceCulture);
             }
         }
         
