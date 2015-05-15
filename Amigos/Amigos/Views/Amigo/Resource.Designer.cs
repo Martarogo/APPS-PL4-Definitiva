@@ -160,6 +160,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Idioma.
+        /// </summary>
+        public static string Idioma {
+            get {
+                return ResourceManager.GetString("Idioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Inicio.
         /// </summary>
         public static string Inicio {

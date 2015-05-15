@@ -117,79 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Acceso" xml:space="preserve">
+    <value>Acceso a</value>
+  </data>
   <data name="AcercaDe" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="Borra" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="BotonBuscar" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="Busca" xml:space="preserve">
-    <value>Look for friends nearby</value>
-  </data>
-  <data name="Cerca" xml:space="preserve">
-    <value>Frinds near you</value>
+    <value>Acerca de</value>
   </data>
   <data name="Contacto" xml:space="preserve">
-    <value>Contact</value>
+    <value>Contacto</value>
   </data>
-  <data name="Crea" xml:space="preserve">
-    <value>Add a new friend</value>
+  <data name="ContactoEmpresa" xml:space="preserve">
+    <value>Universidad de Oviedo</value>
   </data>
-  <data name="Crear" xml:space="preserve">
-    <value>Create</value>
+  <data name="ContactoSede" xml:space="preserve">
+    <value>Escuela Politécnica de Ingeniería de Gijón</value>
   </data>
-  <data name="Distancia" xml:space="preserve">
-    <value>Friends nearby</value>
+  <data name="Stecnico" xml:space="preserve">
+    <value>Servicio técnico</value>
   </data>
-  <data name="Edita" xml:space="preserve">
-    <value>Edit</value>
+  <data name="StringAbout" xml:space="preserve">
+    <value>Aplicación creada por Marta Rodríguez González y Marco Martínez Ávila</value>
   </data>
-  <data name="GuardaCambios" xml:space="preserve">
-    <value>Save changes</value>
+  <data name="StringAmigo" xml:space="preserve">
+    <value>Amigo es una aplicación que permite saber dónde están tus amigos y localizar a los que están más cerca.</value>
   </data>
-  <data name="Idioma" xml:space="preserve">
-    <value>Languaje</value>
-  </data>
-  <data name="Inicio" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="Latitud" xml:space="preserve">
-    <value>Latitude</value>
-  </data>
-  <data name="Longitud" xml:space="preserve">
-    <value>Longitude</value>
-  </data>
-  <data name="Modifica" xml:space="preserve">
-    <value>Modify</value>
-  </data>
-  <data name="Nombre" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="PieDePag" xml:space="preserve">
-    <value>My ASP.NET Amigo application</value>
-  </data>
-  <data name="StringBorrar" xml:space="preserve">
-    <value>Are you sure that you want to delete</value>
-  </data>
-  <data name="StringBuscar" xml:space="preserve">
-    <value>Friends closer than:</value>
+  <data name="Tel" xml:space="preserve">
+    <value>Teléfono</value>
   </data>
   <data name="Titulo" xml:space="preserve">
     <value>Amigo</value>
   </data>
-  <data name="Unidades" xml:space="preserve">
-    <value>meters</value>
-  </data>
-  <data name="Ve" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="VolverDeFiltro" xml:space="preserve">
-    <value>Back to full list</value>
-  </data>
-  <data name="VolverNormal" xml:space="preserve">
-    <value>Back to list</value>
+  <data name="Ventas" xml:space="preserve">
+    <value>Ventas</value>
   </data>
 </root>

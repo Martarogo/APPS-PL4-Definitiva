@@ -150,6 +150,9 @@
   <data name="GuardaCambios" xml:space="preserve">
     <value>Grardar cambios</value>
   </data>
+  <data name="Idioma" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
   <data name="Inicio" xml:space="preserve">
     <value>Inicio</value>
   </data>

@@ -144,6 +144,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Views\Home\HomeResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeResource.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeResource.en.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -198,6 +208,16 @@
     <EmbeddedResource Include="Views\Amigo\Resource.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home\HomeResource.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeResource.en.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>HomeResource</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home\HomeResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeResource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>HomeResource</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
