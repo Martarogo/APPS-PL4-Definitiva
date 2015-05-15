@@ -1,13 +1,13 @@
 ﻿@model Amigos.Models.Amigo
 
 @{
-    ViewBag.Title = "Borrar";
+    ViewBag.Title = Resources.Resource.Borra;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Borrar @Html.DisplayFor(model => model.name)</h2>
+<h2>@Resources.Resource.Borra @Html.DisplayFor(model => model.name)</h2>
 
-<h3>¿Estás seguro de querer borrar a @Html.DisplayFor(model => model.name)?</h3>
+<h3>@Resources.Resource.StringBorrar @Html.DisplayFor(model => model.name)?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -41,8 +41,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Borrar" class="btn btn-default" /> |
-            @Html.ActionLink("Volver a lista", "Index")
+            <input type="submit" value=@Resources.Resource.Borra class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Resource.VolverNormal, "Index")
         </div>
     }
 </div>

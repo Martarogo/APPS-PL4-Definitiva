@@ -129,11 +129,17 @@
   <data name="Busca" xml:space="preserve">
     <value>Busca amigos cerca</value>
   </data>
+  <data name="Cerca" xml:space="preserve">
+    <value>Amigos más cercanos</value>
+  </data>
   <data name="Contacto" xml:space="preserve">
     <value>Contacto</value>
   </data>
   <data name="Crea" xml:space="preserve">
     <value>Añade a un amigo</value>
+  </data>
+  <data name="Crear" xml:space="preserve">
+    <value>Crear</value>
   </data>
   <data name="Distancia" xml:space="preserve">
     <value>Amigos cerca</value>
@@ -161,6 +167,9 @@
   </data>
   <data name="PieDePag" xml:space="preserve">
     <value>Mi aplicación Amigo ASP.NET</value>
+  </data>
+  <data name="StringBorrar" xml:space="preserve">
+    <value>¿Estás seguro de querer borrar a</value>
   </data>
   <data name="StringBuscar" xml:space="preserve">
     <value>Amigos a menos de :</value>

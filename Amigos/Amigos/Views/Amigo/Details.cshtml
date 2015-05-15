@@ -1,11 +1,11 @@
 ﻿@model Amigos.Models.Amigo
 
 @{
-    ViewBag.Title = "Detalles";
+    ViewBag.Title = Resources.Resource.Ve;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Detalles @Html.DisplayFor(model => model.name)</h2>
+<h2>|@Resources.Resource.Ve @Html.DisplayFor(model => model.name)</h2>
 
 <div>
     <hr />
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Volver a lista", "Index")
+    @Html.ActionLink(Resources.Resource.Modifica, "Edit", new { id = Model.ID }) |
+    @Html.ActionLink(Resources.Resource.VolverNormal, "Index")
 </p>

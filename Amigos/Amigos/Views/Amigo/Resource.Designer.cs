@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Amigos más cercanos.
+        /// </summary>
+        public static string Cerca {
+            get {
+                return ResourceManager.GetString("Cerca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Contacto.
         /// </summary>
         public static string Contacto {
@@ -111,6 +120,15 @@ namespace Resources {
         public static string Crea {
             get {
                 return ResourceManager.GetString("Crea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Crear.
+        /// </summary>
+        public static string Crear {
+            get {
+                return ResourceManager.GetString("Crear", resourceCulture);
             }
         }
         
@@ -192,6 +210,15 @@ namespace Resources {
         public static string PieDePag {
             get {
                 return ResourceManager.GetString("PieDePag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ¿Estás seguro de querer borrar a.
+        /// </summary>
+        public static string StringBorrar {
+            get {
+                return ResourceManager.GetString("StringBorrar", resourceCulture);
             }
         }
         

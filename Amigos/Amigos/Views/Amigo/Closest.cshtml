@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Amigos.Models.Amigo>
 
 @{
-    ViewBag.Title = "Closest";
+    ViewBag.Title = Resources.Resource.Cerca;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Amigos más cercanos</h2>
+<h2>@Resources.Resource.Cerca</h2>
 
 <table class="table">
     <tr>
@@ -34,9 +34,9 @@
                 @Html.DisplayFor(modelItem => item.lati)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Borrar", "Delete", new { id = item.ID })
+                @Html.ActionLink(@Resources.Resource.Edita, "Edit", new { id = item.ID }) |
+                @Html.ActionLink(@Resources.Resource.Ve, "Details", new { id = item.ID }) |
+                @Html.ActionLink(@Resources.Resource.Borra, "Delete", new { id = item.ID })
             </td>
         </tr>
     }
@@ -44,5 +44,5 @@
 
 
 <div>
-    @Html.ActionLink("Volver a lista completa", "Index")
+    @Html.ActionLink(@Resources.Resource.VolverDeFiltro, "Index")
 </div>

@@ -1,16 +1,16 @@
 ﻿@{
-    ViewBag.Title = "Contacto";
+    ViewBag.Title = HomeResource.HomeResource.Contacto; 
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@HomeResource.HomeResource.Contacto</h2>
 
 <address>
-    Escuela Politécnica de Ingeniería de Gijón <br />
-    Universidad de Oviedo<br />
-    <abbr title="Teléfono">Tel:</abbr>
+    @HomeResource.HomeResource.ContactoSede<br />
+    @HomeResource.HomeResource.ContactoEmpresa<br />
+    <abbr title=@HomeResource.HomeResource.Tel>@HomeResource.HomeResource.Tel:</abbr>
     555.555.555
 </address>
 
 <address>
-    <strong>Servício técnico:</strong>   <a href="mailto:incidencias@example.com">incidencias@example.com</a><br />
-    <strong>Ventas:</strong> <a href="mailto:Ventas@example.com">Ventas@example.com</a>
+    <strong>@HomeResource.HomeResource.Stecnico:</strong>   <a href="mailto:incidencias@example.com">incidencias@example.com</a><br />
+    <strong>@HomeResource.HomeResource.Ventas:</strong> <a href="mailto:Ventas@example.com">Ventas@example.com</a>
 </address>
