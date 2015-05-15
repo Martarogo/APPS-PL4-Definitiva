@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Amigos.DataAccessLayed;
 using Amigos.Models;
+using Amigos.Helpers;
 
 namespace Amigos.Controllers
 {

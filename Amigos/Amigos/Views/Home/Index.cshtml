@@ -1,5 +1,14 @@
 ﻿@{
     ViewBag.Title = Resource.Titulo;
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+
+@helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:checked="checked"
+    }
 }
 
 <div class="jumbotron">
@@ -7,3 +16,43 @@
     <p class="lead">@Resource.StringAmigo</p>
     <p><a href="http://localhost:54321/Amigo/" class="btn btn-primary btn-large">@Resource.Acceso <b>@Resource.Titulo</b> &raquo;</a></p>
 </div>
+
+@using (Html.BeginForm("SetCulture", "Home"))
+{
+    <fieldset>
+        <legend>@Resource.Lang</legend>
+        <div class="control-group">
+            <div class="controls">
+                <label for="en-us">
+                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label for="es">
+                    <input name="culture" id="es" value="es" type="radio" @selected("es", culture) /> Español
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label for="ar">
+                    <input name="culture" id="ar" value="ar" type="radio" @selected("ar", culture) /> العربية
+                </label>
+            </div>
+        </div>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        (function ($) {
+            $("input[type = 'radio']").click(function () {
+                $(this).parents("form").submit(); // post form
+            });
+
+        })(jQuery);
+    </script>
+}

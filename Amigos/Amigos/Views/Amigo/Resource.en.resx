@@ -156,6 +156,12 @@
   <data name="Edita" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="Eng" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Esp" xml:space="preserve">
+    <value />
+  </data>
   <data name="GuardaCambios" xml:space="preserve">
     <value>Save changes</value>
   </data>
@@ -164,6 +170,9 @@
   </data>
   <data name="Inicio" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="Latitud" xml:space="preserve">
     <value>Latitude</value>

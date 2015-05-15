@@ -178,6 +178,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string Eng {
+            get {
+                return ResourceManager.GetString("Eng", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string Esp {
+            get {
+                return ResourceManager.GetString("Esp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Grardar cambios.
         /// </summary>
         public static string GuardaCambios {
@@ -201,6 +219,15 @@ namespace Resources {
         public static string Inicio {
             get {
                 return ResourceManager.GetString("Inicio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Idioma.
+        /// </summary>
+        public static string Lang {
+            get {
+                return ResourceManager.GetString("Lang", resourceCulture);
             }
         }
         
