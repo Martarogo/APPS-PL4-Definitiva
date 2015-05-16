@@ -20,29 +20,19 @@
 @using (Html.BeginForm("SetCulture", "Home"))
 {
     <fieldset>
-        <legend>@Resource.Lang</legend>
-        <div class="control-group">
-            <div class="controls">
-                <label for="en-us">
-                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
-                </label>
-            </div>
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-default">@Resource.Lang </button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Desplegar menú</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><input name="culture" id="es" value="Español" type="submit" @selected("es", culture) /></li>
+                <li><input name="culture" id="en" value="English" type="submit" @selected("en", culture) /></li>
+            </ul>
         </div>
-        <div class="control-group">
-            <div class="controls">
-                <label for="es">
-                    <input name="culture" id="es" value="es" type="radio" @selected("es", culture) /> Español
-                </label>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <label for="ar">
-                    <input name="culture" id="ar" value="ar" type="radio" @selected("ar", culture) /> العربية
-                </label>
-            </div>
-        </div>
-    </fieldset>
+</fieldset>
+    
 }
 
 @section Scripts {
