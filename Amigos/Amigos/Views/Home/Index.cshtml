@@ -24,11 +24,11 @@
             <button type="button" class="btn btn-default">@Resource.Lang </button>
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
-                <span class="sr-only">Desplegar menú</span>
+                <span class="sr-only">Menu</span>
             </button>
             <ul class="dropdown-menu">
-                <li><input name="culture" id="es" value="Español" type="submit" @selected("es", culture) /></li>
-                <li><input name="culture" id="en" value="English" type="submit" @selected("en", culture) /></li>
+                <li><input name="culture" id="es" value="es" type="radio" @selected("es", culture) />Español</li>
+                <li><input name="culture" id="en" value="en" type="radio" @selected("en", culture) />English</li>
             </ul>
         </div>
 </fieldset>
