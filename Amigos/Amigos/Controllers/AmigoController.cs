@@ -15,6 +15,7 @@ namespace Amigos.Controllers
     public class AmigoController : BaseController
     {
         private AmigoDBContext db = new AmigoDBContext();
+        private readonly String FORMATERROR="#formaterror";
 
         // GET: Amigo
         public ActionResult Index()
@@ -52,11 +53,19 @@ namespace Amigos.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Amigos.Add(amigo);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                amigo.lati = decimalFormat(amigo.lati);
+                amigo.longi = decimalFormat(amigo.longi);
+                if (amigo.lati == FORMATERROR || amigo.longi == FORMATERROR)
+                {
+                    RedirectToAction("Create");
+                }
+                else
+                {
+                    db.Amigos.Add(amigo);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                } 
             }
-
             return View(amigo);
         }
         
@@ -70,6 +79,8 @@ namespace Amigos.Controllers
         [HttpPost]
         public ActionResult Distance([Bind(Include = "ID,name,longi,lati")] Amigo ami, string distance)
         {
+            ami.longi = decimalFormat(ami.longi);
+            ami.lati = decimalFormat(ami.lati);
             if(Convert.ToDouble(distance)<0||Math.Abs(Convert.ToDouble(ami.lati))>90||Math.Abs(Convert.ToDouble(ami.longi))>90){
                 return View();
             }else{
@@ -83,13 +94,14 @@ namespace Amigos.Controllers
             Amigo me = new Amigo();
             me.lati = lati;
             me.longi = longi;
+            if (radium.Contains(",")) radium = radium.Replace(",",".");
             double maxDistance = Convert.ToDouble(radium);
 
             List<Amigo> lista = new List<Amigo>();
 
             foreach (Amigo friend in db.Amigos)
             {
-                if (me.getDistance(friend) <= Convert.ToDouble(radium))
+                if (me.getDistance(friend) <= maxDistance)
                 {
                     lista.Add(friend);
                 }
@@ -122,9 +134,18 @@ namespace Amigos.Controllers
             if (ModelState.IsValid)
             //Este condicional sirve para determinar si los datos recibidos son válidos para crear un nuevo objeto e insertarlo en la base de datos.
             {
-                db.Entry(amigo).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                amigo.lati=decimalFormat(amigo.lati);
+                amigo.longi = decimalFormat(amigo.longi);
+                if (amigo.lati == FORMATERROR || amigo.longi == FORMATERROR)
+                {
+                    RedirectToAction("Edit");
+                }
+                else
+                {
+                    db.Entry(amigo).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
             return View(amigo);
         }
@@ -162,6 +183,28 @@ namespace Amigos.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private String decimalFormat(String n)
+        {
+            if (n.Contains(",")){
+                if (n.Contains("."))
+                {
+                    return FORMATERROR;
+                }
+                n=n.Replace(",", "."); 
+            }
+            try
+            {
+                double aux=Convert.ToDouble(n);
+                if (Math.Abs(aux) > 90)
+                {
+                    return FORMATERROR;
+                }
+                return aux.ToString();
+            }catch(FormatException){
+                return FORMATERROR;
+            }
         }
     }
 }

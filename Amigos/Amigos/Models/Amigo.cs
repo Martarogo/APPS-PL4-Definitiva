@@ -19,9 +19,16 @@ namespace Amigos.Models
 
         public double getDistance(Amigo a)
         {
-            GeoCoordinate me = new GeoCoordinate(Convert.ToDouble(lati),Convert.ToDouble(longi));
-            GeoCoordinate friend = new GeoCoordinate(Convert.ToDouble(a.lati),Convert.ToDouble(a.longi));
-            return me.GetDistanceTo(friend); 
+            try
+            {
+                GeoCoordinate me = new GeoCoordinate(Convert.ToDouble(lati), Convert.ToDouble(longi));
+                GeoCoordinate friend = new GeoCoordinate(Convert.ToDouble(a.lati), Convert.ToDouble(a.longi));
+                return me.GetDistanceTo(friend);
+            }
+            catch(ArgumentOutOfRangeException) {
+                return Double.MaxValue;
+            }
+             
            //Distancia entre 2 ubicaciones, en metros
             //Utiliza la fórmula Haversine, responsable de la curvatura de la tierra, suponiéndola esférica en lugar de un elipsoide. 
             //Para largas distancias, la fórmula Haversine introduce un error menor de 0,1 por ciento.
