@@ -55,7 +55,7 @@ namespace Amigos.Controllers
             {
                 amigo.lati = decimalFormat(amigo.lati);
                 amigo.longi = decimalFormat(amigo.longi);
-                if (amigo.lati == FORMATERROR || amigo.longi == FORMATERROR)
+                if (amigo.lati == FORMATERROR || amigo.longi == FORMATERROR||validCoord(amigo.lati, amigo.longi))
                 {
                     RedirectToAction("Create");
                 }
@@ -81,7 +81,7 @@ namespace Amigos.Controllers
         {
             ami.longi = decimalFormat(ami.longi);
             ami.lati = decimalFormat(ami.lati);
-            if(Convert.ToDouble(distance)<0||Math.Abs(Convert.ToDouble(ami.lati))>90||Math.Abs(Convert.ToDouble(ami.longi))>90){
+            if(Convert.ToDouble(distance)<0||validCoord(ami.lati,ami.longi)){
                 return View();
             }else{
                 return RedirectToAction("Closest", new { lati=ami.lati, longi=ami.longi, radium=distance});
@@ -136,7 +136,7 @@ namespace Amigos.Controllers
             {
                 amigo.lati=decimalFormat(amigo.lati);
                 amigo.longi = decimalFormat(amigo.longi);
-                if (amigo.lati == FORMATERROR || amigo.longi == FORMATERROR)
+                if (amigo.lati == FORMATERROR || amigo.longi == FORMATERROR||validCoord(amigo.lati,amigo.longi))
                 {
                     RedirectToAction("Edit");
                 }
@@ -197,14 +197,18 @@ namespace Amigos.Controllers
             try
             {
                 double aux=Convert.ToDouble(n);
-                if (Math.Abs(aux) > 90)
-                {
-                    return FORMATERROR;
-                }
                 return aux.ToString();
             }catch(FormatException){
                 return FORMATERROR;
             }
+        }
+
+        private bool validCoord(String lati, String longi)
+        {
+            if ((Math.Abs(Convert.ToDouble(lati)) > 90)||(Math.Abs(Convert.ToDouble(longi))>180))
+            {
+                return true;
+            }else return false;
         }
     }
 }
