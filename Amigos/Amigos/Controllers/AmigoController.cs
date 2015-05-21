@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Amigos.DataAccessLayed;
 using Amigos.Models;
 using Amigos.Helpers;
+using System.Globalization;
 
 namespace Amigos.Controllers
 {
@@ -16,6 +17,7 @@ namespace Amigos.Controllers
     {
         private AmigoDBContext db = new AmigoDBContext();
         private readonly String FORMATERROR="#formaterror";
+        private readonly CultureInfo culture = new CultureInfo("en");
 
         // GET: Amigo
         public ActionResult Index()
@@ -81,7 +83,7 @@ namespace Amigos.Controllers
         {
             ami.longi = decimalFormat(ami.longi);
             ami.lati = decimalFormat(ami.lati);
-            if(Convert.ToDouble(distance)<0||validCoord(ami.lati,ami.longi)){
+            if(Convert.ToDouble(distance,culture)<0||validCoord(ami.lati,ami.longi)){
                 return View();
             }else{
                 return RedirectToAction("Closest", new { lati=ami.lati, longi=ami.longi, radium=distance});
@@ -95,7 +97,7 @@ namespace Amigos.Controllers
             me.lati = lati;
             me.longi = longi;
             if (radium.Contains(",")) radium = radium.Replace(",",".");
-            double maxDistance = Convert.ToDouble(radium);
+            double maxDistance = Double.Parse(radium, culture);
 
             List<Amigo> lista = new List<Amigo>();
 
@@ -196,8 +198,8 @@ namespace Amigos.Controllers
             }
             try
             {
-                double aux=Convert.ToDouble(n);
-                return aux.ToString();
+                double aux = Double.Parse(n,culture);
+                return aux.ToString(culture);
             }catch(FormatException){
                 return FORMATERROR;
             }
@@ -205,7 +207,7 @@ namespace Amigos.Controllers
 
         private bool validCoord(String lati, String longi)
         {
-            if ((Math.Abs(Convert.ToDouble(lati)) > 90)||(Math.Abs(Convert.ToDouble(longi))>180))
+            if ((Math.Abs(Double.Parse(lati, culture)) > 90) || (Math.Abs(Double.Parse(longi,culture)) > 180))
             {
                 return true;
             }else return false;

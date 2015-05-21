@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Device.Location;
+using System.Globalization;
 
 namespace Amigos.Models
 {
@@ -19,10 +20,11 @@ namespace Amigos.Models
 
         public double getDistance(Amigo a)
         {
+            CultureInfo culture = new CultureInfo("en");
             try
             {
-                GeoCoordinate me = new GeoCoordinate(Convert.ToDouble(lati), Convert.ToDouble(longi));
-                GeoCoordinate friend = new GeoCoordinate(Convert.ToDouble(a.lati), Convert.ToDouble(a.longi));
+                GeoCoordinate me = new GeoCoordinate(Double.Parse(lati, culture), Double.Parse(longi, culture));
+                GeoCoordinate friend = new GeoCoordinate(Double.Parse(a.lati, culture), Double.Parse(a.longi, culture));
                 return me.GetDistanceTo(friend);
             }
             catch(ArgumentOutOfRangeException) {
